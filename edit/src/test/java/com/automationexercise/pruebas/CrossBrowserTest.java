@@ -2,6 +2,7 @@ package com.automationexercise.pruebas;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
@@ -24,7 +25,9 @@ public class CrossBrowserTest {
     public void setUp(@Optional("chrome") String navegador) {
         if (navegador.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080");
+            driver = new ChromeDriver(options);
         } else if (navegador.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -35,7 +38,6 @@ public class CrossBrowserTest {
             throw new IllegalArgumentException("Navegador no soportado: " + navegador);
         }
         driver.get(url);
-        driver.manage().window().maximize();
     }
 
     @Test
