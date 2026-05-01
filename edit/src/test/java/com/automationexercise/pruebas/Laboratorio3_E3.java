@@ -39,6 +39,7 @@ public class Laboratorio3_E3 {
         paginaLogin.completarUsername(username);
         paginaLogin.completarPassword(password);
         paginaLogin.clickLogin();
+        System.out.println("Fin del test");
     }
 
     @DataProvider(name = "credenciales")
