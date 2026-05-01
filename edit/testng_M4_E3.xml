@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mi Suite">
+    <test name="Mis Tests">
+        <classes>
+            <class name="com.automationexercise.Laboratorio1">
+                <methods>
+                    <include name="lab1_E2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

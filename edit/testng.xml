@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mi Suite">
+    <test name="Mis Tests">
+        <classes>
+            <class name="com.automationexercise.AppTest"/>
+            <class name="com.automationexercise.Laboratorio1"/>
+            <class name="com.automationexercise.Laboratorio2"/>
+            <class name="com.automationexercise.pruebas.TestRegistroUsuario"/>
+        </classes>
+    </test>
+</suite>
