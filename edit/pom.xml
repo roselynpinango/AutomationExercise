@@ -60,6 +60,29 @@
       <artifactId>poi-ooxml</artifactId>
       <version>5.0.0</version>
   </dependency>
+  <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+  <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.1.2</version>
+  </dependency>
+  <!-- Source: https://github.com/SanjayPG/autoheal-locator -->
+  <dependency>
+      <groupId>io.github.sanjaypg</groupId>
+      <artifactId>autoheal-locator</artifactId>
+      <version>1.0.6</version>
+      <exclusions>
+          <!-- Evitar que JUnit Jupiter desplace a TestNG como provider de Surefire -->
+          <exclusion>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>*</artifactId>
+          </exclusion>
+          <exclusion>
+              <groupId>org.junit.platform</groupId>
+              <artifactId>*</artifactId>
+          </exclusion>
+      </exclusions>
+  </dependency>
 
   </dependencies>
 
@@ -109,6 +132,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.5.0</version>
+            <configuration>
+                <environmentVariables>
+                    <GEMINI_API_KEY>${env.GEMINI_API_KEY}</GEMINI_API_KEY>
+                </environmentVariables>
+            </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

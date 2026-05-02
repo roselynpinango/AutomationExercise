@@ -1,0 +1,11 @@
+{
+    "java.test.config": [
+        {
+            "name": "default",
+            "env": {
+                "GEMINI_API_KEY": "AIzaSyBl5jk_Joqtmb-S_sfS0EolN7ui2JYOVio"
+            },
+            "vmArgs": ["-DGEMINI_API_KEY=AIzaSyBl5jk_Joqtmb-S_sfS0EolN7ui2JYOVio"]
+        }
+    ]
+}
