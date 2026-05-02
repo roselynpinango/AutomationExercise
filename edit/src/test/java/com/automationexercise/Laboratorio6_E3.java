@@ -42,9 +42,7 @@ public class Laboratorio6_E3 {
         registrarUsuarioDePrueba();
         cerrarSesion();
 
-        String geminiKey = System.getenv("GEMINI_API_KEY") != null
-                ? System.getenv("GEMINI_API_KEY")
-                : "AIzaSyBl5jk_Joqtmb-S_sfS0EolN7ui2JYOVio";
+        String geminiKey = System.getenv("GEMINI_API_KEY");
 
         AIConfig aiConfig = new AIConfig.Builder()
                 .provider(AIProvider.GOOGLE_GEMINI)

@@ -3,3 +3,8 @@
 /edit/target
 /AutomationExercise/Evidencias
 /Evidencias
+
+# Archivos con API keys - no subir al repo
+/edit/src/test/resources/autoheal.properties
+/edit/src/test/resources/autoheal-default.properties
+/edit/.vscode/settings.json
